@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="ViewPagerRCV">
+
+        <attr name="startOffset" format="dimension"/>
+
+    </declare-styleable>
+</resources>
