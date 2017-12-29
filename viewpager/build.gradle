@@ -1,17 +1,87 @@
-/*
- * Copyright © 2017. by binil.
- * All rights reserved. This file or any portion thereof
- * may not be reproduced or used in any manner whatsoever
- * without the express written permission of the author.
- */
 
 apply plugin: 'com.android.library'
 
+//ext {
+//    PUBLISH_GROUP_ID = 'com.dev.binil'
+//    PUBLISH_ARTIFACT_ID = 'ViewPagerRCV'
+//    PUBLISH_VERSION = '1.0'
+//}
+
+
+//binil-android-dev / ViewPagerRCV / ViewPagerRCV / 1.0
+//binil / ViewPagerRCV / ViewPagerRCV / 1.0
+
 ext {
-    PUBLISH_GROUP_ID = 'com.dev.binil'
-    PUBLISH_ARTIFACT_ID = 'ViewPagerRCV'
-    PUBLISH_VERSION = '1.0'
+    bintrayRepo = 'ViewPagerRCV' // your repo name
+    bintrayName = 'viewpager' // has to be same as your library module name
+    publishedGroupId = 'com.dev.binil.viewpager' // your module package name
+    artifact = 'viewpager' // has to be same as your library module name
+
+    libraryName = 'viewpager'
+    libraryDescription = 'A replacement for regular view pager with smooth scrolling like a recycler view.'
+    libraryVersion = '1.0.0'
+
+    siteUrl = 'https://github.com/binil-vrgs/ViewPagerRCV'
+    gitUrl = 'https://github.com/binil-vrgs/ViewPagerRCV.git'
+
+    developerId = 'binil'
+    developerName = 'Binil'
+    developerEmail = 'binil.vrgs@gmail.com'
+//    organization = 'binil-android-dev'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
 }
+
+//bintray {
+//    user = 'binil'
+//    key = 'c15c43149b8c8dc2fe2387aaeb302ad6c30b8ed7'
+//    pkg {
+//        repo = 'ViewPagerRCV'
+//        name = 'viewpager'
+//        userOrg = 'binil-android-dev'
+//        version {
+//            name = '1.0'
+//        }
+//    }
+//}
+
+//install {
+//    repositories.mavenInstaller {
+//        // This generates POM.xml with proper parameters
+//        pom {
+//            project {
+//                packaging 'aar'
+//
+//                // Add your description here
+//                name 'A replacement for regular view pager with smooth scrolling like a recycler view.'
+//                url 'https://github.com/binil-vrgs/ViewPagerRCV'
+//
+//                // Set your license
+//                licenses {
+//                    license {
+//                        name 'The Apache Software License, Version 2.0'
+//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    }
+//                }
+//                developers {
+//                    developer {
+//                        id 'binil'
+//                        name 'Binil'
+//                        email 'binil.vrgs@gmail.com'
+//                    }
+//                }
+//                scm {
+//                    connection 'https://github.com/binil-vrgs/ViewPagerRCV.git'
+//                    developerConnection 'https://github.com/binil-vrgs/ViewPagerRCV.git'
+//                    url 'https://github.com/binil-vrgs/ViewPagerRCV'
+//
+//                }
+//            }
+//        }
+//    }
+//}
 
 android {
     compileSdkVersion 26
@@ -34,14 +104,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:recyclerview-v7:26.1.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
 }
 
-apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
+//apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
+
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/installv.gradle'
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/bintrayv.gradle'

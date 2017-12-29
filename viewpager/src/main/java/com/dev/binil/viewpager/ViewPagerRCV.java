@@ -1,10 +1,3 @@
-/*
- * Copyright © 2017. by binil.
- * All rights reserved. This file or any portion thereof
- * may not be reproduced or used in any manner whatsoever
- * without the express written permission of the author.
- */
-
 package com.dev.binil.viewpager;
 
 import android.content.Context;
@@ -16,7 +9,7 @@ import android.util.AttributeSet;
 import android.view.animation.DecelerateInterpolator;
 
 /**
- * @author blin on 11/28/17.
+ * @author binil on 11/28/17.
  */
 
 public class ViewPagerRCV extends RecyclerView {
