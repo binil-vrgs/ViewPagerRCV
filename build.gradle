@@ -1,7 +1,4 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
-    
     repositories {
         google()
         jcenter()
@@ -10,44 +7,17 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.0.1'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-        
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
-}
-
-
-plugins {
-    id "com.jfrog.bintray" version "1.7"
-}
-
-
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'java'
-
-//binil / ViewPagerRCV / ViewPagerRCV / 1.0
-
-bintray {
-    user = 'binil'
-    key = 'c15c43149b8c8dc2fe2387aaeb302ad6c30b8ed7'
-    pkg {
-        repo = 'ViewPagerRCV'
-        name = 'viewpager'
-//        userOrg = 'binil-android-dev'
-        version {
-            name = '1.0.0'
-        }
     }
 }
 
 allprojects {
+
     repositories {
-        google()
         jcenter()
+        google()
     }
 }
 
-//task clean(type: Delete) {
-//    delete rootProject.buildDir
-//}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -16,8 +16,6 @@ import com.dev.binil.viewpager.ViewPagerRCV;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final int Offset = 200;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
 
-            holder.mName.setText("Item");
+            holder.mName.setText(R.string.item);
             holder.mCount.setText(String.valueOf(position));
         }
 
@@ -115,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
 
-            holder.mName.setText("Item");
+            holder.mName.setText(R.string.item);
             holder.mCount.setText(String.valueOf(position));
         }
 
@@ -130,10 +128,11 @@ public class MainActivity extends AppCompatActivity {
             ViewHolder(View itemView) {
                 super(itemView);
 
-                Display display = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-                ViewGroup.LayoutParams layoutParams = itemView.getLayoutParams();
-                layoutParams.width = display.getWidth() - Offset;
-                itemView.setLayoutParams(layoutParams);
+//                Display display = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+//                ViewGroup.LayoutParams layoutParams = itemView.getLayoutParams();
+//                int offset = 200;
+//                layoutParams.width = display.getWidth() - offset;
+//                itemView.setLayoutParams(layoutParams);
 
                 mName = itemView.findViewById(R.id.name);
                 mCount = itemView.findViewById(R.id.count);

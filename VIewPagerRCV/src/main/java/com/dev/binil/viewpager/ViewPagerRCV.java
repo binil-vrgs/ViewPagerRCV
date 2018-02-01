@@ -2,7 +2,6 @@ package com.dev.binil.viewpager;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
@@ -82,7 +81,7 @@ public class ViewPagerRCV extends RecyclerView {
         this.addOnScrollListener(mListener);
     }
 
-    public ViewPagerRCV(Context context, @Nullable AttributeSet attrs) {
+    public ViewPagerRCV(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.addOnScrollListener(mListener);
 
@@ -90,7 +89,7 @@ public class ViewPagerRCV extends RecyclerView {
         setStartOffSet(a.getDimensionPixelSize(R.styleable.ViewPagerRCV_startOffset, 0));
     }
 
-    public ViewPagerRCV(Context context, @Nullable AttributeSet attrs, int defStyle) {
+    public ViewPagerRCV(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         this.addOnScrollListener(mListener);
 

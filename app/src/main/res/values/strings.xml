@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ViewPagerRCV</string>
+    <string name="item">Item</string>
+    <string name="without_start_offset">Without start offset:</string>
+    <string name="with_start_offset_80dp">With start offset - 80dp:</string>
 </resources>

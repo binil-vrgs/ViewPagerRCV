@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'ViewPager'
+    bintrayName = 'VIewPagerRCV'   // Has to be same as your library module name
+
+    publishedGroupId = 'com.dev.binil.viewpager'
+    libraryName = 'VIewPagerRCV'
+    artifact = 'VIewPagerRCV'     // Has to be same as your library module name
+
+    libraryDescription = 'A replacement for regular view pager with smooth scrolling like a recycler view.'
+
+    // Your github repo link
+    siteUrl = 'https://github.com/binil-vrgs/ViewPagerRCV'
+    gitUrl = 'https://github.com/binil-vrgs/ViewPagerRCV.git'
+    githubRepository = 'binil-vrgs/ViewPagerRCV'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'binil'
+    developerName = 'Binil Varghese'
+    developerEmail = 'binil.vrgs@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+}
+apply from: 'install.gradle'
+apply from: 'bintray.gradle'
